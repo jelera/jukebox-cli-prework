@@ -33,7 +33,7 @@ def play(songs)
   play_prompt
 
   while user_input = gets.chomp
-    if songs.find(user_input) || songs[user_input.to_i + 1]
+    if songs.include?(user_input) || songs[user_input.to_i + 1]
       song_playing = songs[user_input.to_i + 1] || songs[songs.index(user_input)]
       break
     else
