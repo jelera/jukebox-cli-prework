@@ -20,17 +20,13 @@ def help
   HELP
 end
 
-def play_prompt
-  prompt = "> "
-  puts "Please enter a song name or number:"
-  print prompt
-end
-
 def play(songs)
 
   song_playing = nil
+  prompt = "> "
+  puts "Please enter a song name or number:"
+  print prompt
 
-  play_prompt
 
   user_input = gets.chomp
 
