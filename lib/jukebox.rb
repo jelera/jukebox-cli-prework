@@ -20,13 +20,17 @@ def help
   HELP
 end
 
+def play_prompt
+  prompt = "> "
+  puts "Please enter a song name or number:"
+  print prompt
+end
+
 def play(songs)
 
   song_playing = nil
 
-  prompt = "> "
-  puts "Please enter a song name or number:"
-  print prompt
+  play_prompt
 
   while user_input = gets.chomp
     if songs.find(user_input) || songs[user_input]
@@ -34,6 +38,7 @@ def play(songs)
       break
     else
       puts "Invalid input, please try again"
+      play_prompt
     end
   end
 
