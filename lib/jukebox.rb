@@ -31,8 +31,9 @@ def play(songs)
     if song == user_input || (i + 1) == user_input.to_i
       output = "Playing #{song}"
       # output = song
-    end
+    else
       output = "Invalid input, please try again"
+    end
   end
 
   puts output
