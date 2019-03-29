@@ -21,22 +21,18 @@ def help
 end
 
 def play(songs)
+  output = ""
+
   puts "Please enter a song name or number:"
-  song = gets.chomp
-  new_song = "Playing "
-  songs.each_with_index do |son, index|
-    if son == song
-      new_song = "Playing #{son}"
+  user_input = gets.chomp
+
+  songs.each_with_index do |song, i|
+    if user_input == song || user_input.to_i == i + 1
+      output = "Playing #{song}"
       break
-    elsif song.to_i == index+1
-      new_song = "Playing #{son}"
-      break
-    else
-        new_song = "Invalid input, please try again"
     end
 
-  end
-  puts new_song
+  puts output
 end
 
 def list(songs)
