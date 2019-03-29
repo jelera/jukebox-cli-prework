@@ -32,14 +32,13 @@ def play(songs)
 
   play_prompt
 
-  while user_input = gets.chomp
-    if songs.include?(user_input) || songs[user_input.to_i + 1]
-      song_playing = songs[user_input.to_i + 1] || songs[songs.index(user_input)]
-      break
-    else
-      puts "Invalid input, please try again"
-      play_prompt
-    end
+  user_input = gets.chomp
+
+  if songs.include?(user_input) || songs[user_input.to_i + 1]
+    song_playing = songs[user_input.to_i + 1] || songs[songs.index(user_input)]
+  else
+    puts "Invalid input, please try again"
+    play_prompt
   end
 
   puts song_playing
