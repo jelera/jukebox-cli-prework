@@ -23,20 +23,19 @@ end
 def play(songs)
 
   song_playing = nil
-  # prompt = "> "
-  # puts "Please enter a song name or number:"
-  # print prompt
+  output = ""
 
-
+  puts "Please enter a song name or number:"
   user_input = gets.chomp
 
-  if songs.include?(user_input) || songs[user_input.to_i - 1]
-    song_playing = songs[user_input.to_i - 1] || user_input
-  else
-    puts "Invalid input, please try again"
+  songs.each_with_index do |song, i|
+    if song == user_input || (i + 1) == user_input.to_i
+      song_playing = song
+    end
+      output = "Invalid input, please try again"
   end
-
-  puts song_playing
+  
+  puts "Playing #{song_playing}"
 end
 
 def list(songs)
