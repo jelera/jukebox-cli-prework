@@ -23,9 +23,9 @@ end
 def play(songs)
 
   song_playing = nil
-  prompt = "> "
-  puts "Please enter a song name or number:"
-  print prompt
+  # prompt = "> "
+  # puts "Please enter a song name or number:"
+  # print prompt
 
 
   user_input = gets.chomp
