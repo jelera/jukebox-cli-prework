@@ -22,7 +22,6 @@ end
 
 def play(songs)
 
-  song_playing = nil
   output = ""
 
   puts "Please enter a song name or number:"
@@ -30,9 +29,8 @@ def play(songs)
 
   songs.each_with_index do |song, i|
     if song == user_input || (i + 1) == user_input.to_i
-      song_playing = song
-      # output = "Playing #{song_playing}"
-      output = song_playing
+      # output = "Playing #{song}"
+      output = song
     end
       output = "Invalid input, please try again"
   end
