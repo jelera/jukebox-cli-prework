@@ -33,6 +33,7 @@ def play(songs)
     else
       output = "Invalid input, please try again"
     end
+  end
 
   puts output
 end
