@@ -33,8 +33,8 @@ def play(songs)
   play_prompt
 
   while user_input = gets.chomp
-    if songs.find(user_input) || songs[user_input]
-      song_playing = songs[user_input] || songs[songs.index(user_input)]
+    if songs.find(user_input) || songs[user_input.to_i]
+      song_playing = songs[user_input.to_i] || songs[songs.index(user_input)]
       break
     else
       puts "Invalid input, please try again"
