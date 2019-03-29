@@ -31,12 +31,11 @@ def play(songs)
   songs.each_with_index do |song, i|
     if song == user_input || (i + 1) == user_input.to_i
       song_playing = song
-      output = "Playing #{song_playing}"
     end
       output = "Invalid input, please try again"
   end
 
-  puts output
+  puts "Playing #{song_playing}"
 end
 
 def list(songs)
