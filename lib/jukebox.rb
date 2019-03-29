@@ -20,6 +20,21 @@ def help
   HELP
 end
 
+def play(songs)
+
+  prompt = "> "
+  puts "Please enter a song name or number:"
+  print prompt
+
+  while user_input = gets.chomp
+    if songs.find(user_input) || songs[user_input]
+      song_playing = songs[user_input] || songs[songs.index(user_input)]
+    else
+
+    end
+  end
+end
+
 def list(songs)
   output = ""
 
