@@ -22,6 +22,8 @@ end
 
 def play(songs)
 
+  song_playing = nil
+
   prompt = "> "
   puts "Please enter a song name or number:"
   print prompt
@@ -29,10 +31,13 @@ def play(songs)
   while user_input = gets.chomp
     if songs.find(user_input) || songs[user_input]
       song_playing = songs[user_input] || songs[songs.index(user_input)]
+      break
     else
-
+      puts "Invalid input, please try again"
     end
   end
+
+  puts song_playing
 end
 
 def list(songs)
